@@ -2,6 +2,10 @@
 
 ## 📝 Notes
 
+- Follow the file name convention to get routes in Remix. e.g fileName routes/products/index.ts, will produce
+a path in your app for: domain/products and render the component that you export by default
+- Navigate with Link component, same that comes from react-router
+
 ## 🤓 Background
 
 Almost everything with a URL has routing requirements. Whether it's a web app,
