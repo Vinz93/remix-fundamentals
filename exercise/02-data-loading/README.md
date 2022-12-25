@@ -1,6 +1,17 @@
 # 02. Data Loading
 
 ## 📝 Notes
+- the `loader` function creates an endpoint where we can basically collect the data that we want to render.
+- the  `useLoaderData` hooks takes the `serialized` Response from the loader function and put it in the UI
+- With the generic and in the hook we can pass `typeof loader` to have type safety from the hook, which will know what data we return from the loader function
+- Prisma: in oder to query things from Prisma in the `model` folder we need the following things first
+  - Update the Prisma schema, which has a very handy syntax that prisma will use to generate your SQL migration
+  - Run `prisma migrate dev` to __generate__ a migration base on the changes made in the schema, and then apply them to the `db` to make it in synch 
+  - For development you might need to add data in your seed, which is basically add data into your table using your Prisma client
+  - Run `prisma db seed`
+  - make your functions to fetch your data
+
+- the `loader` only runs on the server, and its the right place to remove the things that your UI doesn't need, basically one of the use cases that GraphQL covers
 
 ## 🤓 Background
 
