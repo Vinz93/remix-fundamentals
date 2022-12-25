@@ -2,6 +2,9 @@
 
 ## 📝 Notes
 
+- In the `loader function` you can get the __route parameters__ from the props `LoaderProps`
+- The parameter name will follow the file convention, used to generate routes
+- Is a good pattern to prepare all your data in the `loader` function, so you don't need to manipulate or get unnecessary data in the UI, by doing that we are reducing the amount of things that the user client needs to compute  
 ## 🤓 Background
 
 Checkout this link to a tweet:
