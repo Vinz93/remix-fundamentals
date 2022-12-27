@@ -2,6 +2,16 @@
 
 ## 📝 Notes
 
+- You need a `<Form>` component  from remix, with method `post`
+- When the client submits its data from the form you'll catch it in an `action` function
+- The action function takes a request from the arguments
+- From the `request` you can get the **data** from the `form`. e.g `const formData = await request.formData();`
+- You can validate the user data, and return the validation results with the `json` helper, and get those validation results in the UI with `useActionData()` hook
+- You can also do some type validation, `tiny-variant` it's a handy library that can help with it
+- Create or persist your data in your `db`
+- Use the helper function `redirect` to navigate to another route, that route will re-fetch the updated data
+
+
 ## 🤓 Background
 
 Getting data onto the page is the easy part. Remix has great APIs and
