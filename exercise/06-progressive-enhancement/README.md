@@ -1,6 +1,11 @@
 # 06. Progressive Enhancement
 
 ## 📝 Notes
+- Because Remix is rendering the app in the server, the app works without JS, the problem is that we get a funky UX, because whenever a transition needs to happen we get 
+a page reload, or we don't get any load state
+- Remix offers a hook (useTransition) to handle transitions, with it you can capture when the use submits a form, so you can show the loading state in the UI
+- Using Boolean() instead of !! might be bit more elegant when you need to cast values to boolean
+- Prefetching is a powerful functionality builtin Remix, that helps to capture user intents and download data before the click on it, this is quite great to improve the UX
 
 ## 🤓 Background
 
