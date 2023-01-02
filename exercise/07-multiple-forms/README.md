@@ -1,6 +1,14 @@
 # 07. Multiple Forms
 
 ## 📝 Notes
+- There are forms that can submit with different purposes with different buttons. e.g Login, Sign up or Update, delete
+- In order to distinguish the intention of the __form__ you can use `name` and `value` 
+- The convention for the submit button is `intent`.
+- You can grab the intent in the `action` function with 
+  -  const formData = await request.formData()
+  -  const intent = formData.get("intent");
+- Once you get the intent, you can adjust your server logic base on it
+- In UI you can grab the intention from the `transition` and adjust the UI accordingly
 
 ## 🤓 Background
 
