@@ -2,6 +2,27 @@
 
 ## 📝 Notes
 
+
+**Handle Errors**: When an component in a route experiences an Error, you can tell remix to render something else, at that would be your
+nearest `Error boundary` component
+
+**Expected Errors**: Expected errors can be something like a 404 and you can `throw` a `Response` in your `loader` or `action`. When this happens, Remix will catch that and render the nearest `CatchBoundary` component
+
+With the `useCatch` hook you can check the status of your expected error and if is not expected at all you can throw and error that can be caught by your `Error Boundary`
+
+**Hidden Parent Routes**
+
+When you want to handle and error in a parent route that doesn't wrap its children in UI
+you can just have a file that returns and `Outlet` component and there add your error boundary.
+
+
+```tsx
+import { Outlet } from "@remix-run/react";
+export default function HiddenParentRoute() {
+  return <Outlet />;
+}
+```
+
 ## 🤓 Background
 
 No matter how hard you try, you will experience errors in production. Not only
