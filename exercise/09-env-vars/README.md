@@ -2,6 +2,13 @@
 
 ## 📝 Notes
 
+- To make the `env` variables available in the server, you can loaded them with `process.env` and then add it into the global object (not encourage in production)
+- To make something available in `global node` (server side), you can set that in the `entry.server.tsx` file.
+- To make something available globally in the client side `window`, you can load the `process.env` and pass it via the loader function to the client and then add it un a `<script>` that sets the environment variables in the `window` object
+
+- Typescript tip: use `declare` to type the environment variables in the `global` object, use `invariant` to ensure that the types are not null.
+
+
 ## 🤓 Background
 
 Because we have a Node.js server at runtime, most use cases for environment
