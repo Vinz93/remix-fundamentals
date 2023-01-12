@@ -62,6 +62,16 @@ export async function requireUser(request: Request) {
   throw await logout(request);
 }
 
+export async function requireAdminUser(request: Request) {
+  const user = await requireUser(request);
+  console.log(user);
+  if (user.email !== ENV.ADMIN_EMAIL) {
+    throw await logout(request);
+  }
+
+  return user;
+}
+
 // 🐨 create a function called requireAdminUser which accepts a request
 // 1. call requireUser
 // 2. compare user.email with ENV.ADMIN_EMAIL

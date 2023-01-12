@@ -1,6 +1,11 @@
 # 10. Admin user
 
 ## 📝 Notes
+- Every `loader` and `action` functions in Remix is an API endpoint so we have protect them 
+- In the workshop we use cookies to keep track of the logged user 
+- We built a helper function that **verifies if the logged user is an admin** and if that's not the case, we send them back to the login screen with `throw await logout(request);` which is a `redirect` that destroys the cookie.
+- We used **useMatchesData** hook by remix that give us the data that is loaded by an active route, and we use it to grab the logged user from the "root" route (it's exposed in the loader function)
+- When we got the admin user data and we used it to display special things just for users
 
 ## 🤓 Background
 
